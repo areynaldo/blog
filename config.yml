@@ -68,18 +68,12 @@ params:
     profileMode:
         enabled: true
         title: \@areynaldo
-        subtitle: "_Modern software is a mess. The status quo needs to change. But we're optimistic that we can change it._"
+        subtitle: "_\"Modern software is a mess. The status quo needs to change. But we're optimistic that we can change it.\"_"
         imageUrl: "https://avatars.githubusercontent.com/u/49327220?v=4"
         imageTitle: \@areynaldo
         # imageWidth: 120
         # imageHeight: 120
-        buttons:
-            - name: Projects
-              url: projects
-            - name: Archive
-              url: archives
-            - name: Tags
-              url: tags
+        # buttons:
 
     socialIcons:
         - name: github
