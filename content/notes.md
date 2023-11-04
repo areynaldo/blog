@@ -18,4 +18,4 @@ menu = "main"
 # tags = []
 +++
 
-This is a page about »Notes«.
+_Some notes I take while learning things._
