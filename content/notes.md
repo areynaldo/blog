@@ -6,6 +6,7 @@ title = "Notes"
 # the main menu on top of the page
 #
 menu = "main"
+weight = 1
 
 #
 # description is optional

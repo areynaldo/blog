@@ -6,6 +6,7 @@ title = "Favorites"
 # the main menu on top of the page
 #
 menu = "main"
+weight = 3
 
 #
 # description is optional
