@@ -19,7 +19,7 @@ weight = 1
 # tags = [about, contact, bio, biography, areynaldo, andy reynaldo]
 +++
 
-Hi, I'm Andy, a Computer Science student and a BMW intern. In my free time, I enjoy coding and learn about stuff I consider interesting and in this site I share [what I learn](/notes), [what I like](/favorites) and what [I work on](/blog).
+Hi, I'm Andy, a Computer Science student and a BMW intern. In my free time, I enjoy coding and learning about stuff I consider interesting and in this site I share [what I learn](/notes), [what I like](/favorites) and what [I work on](/blog).
 
 _Curriculum Vitae_:
 - 2021-Present: Dual Course of Study in Computer Science at BMW
