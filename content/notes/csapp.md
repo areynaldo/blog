@@ -33,11 +33,11 @@
     S = 1/((1 - alpha) + a/k)
     ```
 
-*Trhead-Level Concurrency*:
+- *Trhead-Level Concurrency*:
     - each its own L1, L2 caches
     - L1 split in: (data) d-cache, (instructions) i-cache
     - L3 is unified
     - Hyperthread: 2 threads per core (2 copies of some parts of the hardware like PC and register files)
 
-*Instruction-Level Parallelism*: multiple instructions at one time
-*Single-Instruction, Multiple-Data (SIMD) Parallelism*: e.g. add 8 floats in parallel.
+- *Instruction-Level Parallelism*: multiple instructions at one time
+- *Single-Instruction, Multiple-Data (SIMD) Parallelism*: e.g. add 8 floats in parallel.
