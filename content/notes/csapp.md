@@ -86,13 +86,22 @@
         ( %rax ... %rbp ), %rsp, ( %r8  ... %r15  ) (64 bits)
     ```
     - *operands*:
+        expression      | type                                               
+        ----------------|----------------------------------------------------
+        %rax            | register value                                     
+        0x104           | memory adress                                      
+        $0x104          | literal                                            
+        4(%rax)         | adress pointed by the register + 4 offset          
+        9(%rax, %rdx)   | 9 + (adress in register_a) + (value in register_d) 
+        (%rax, %rdx, 4) | (adress in register_a) + (value in register_d) * 4 
+
     ```asm
-        nop %rax                # register value
-        nop 0x104               # memory adress
-        nop $0x104              # literal
-        nop 4(%rax)             # adress pointed by the register + 4 offset
-        nop 9(%rax, %rdx)       # 9 + (adress in register_a) + (value in register_d)
-        nop (%rax, %rdx, 4)     # (adress in register_a) + (value in register_d) * 4
+             # 
+             # 
+             # 
+             # 
+             # 
+             # 
     ```
     - *mov*:
     ```asm
