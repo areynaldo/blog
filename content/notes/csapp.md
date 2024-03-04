@@ -77,3 +77,66 @@
         *u8    | quad word         |  q          | 8
         f32    | single precision  |  s          | 4
         f64    | double precision  |  q          | 8
+
+    - *general-purpose registers*:
+    ```c
+        ( %al  ... %bpl ), %spl, ( %r8b ... %r15b ) (8 bits )
+        ( %ax  ... %bp  ), %sp , ( %r8w ... %r15w ) (16 bits)
+        ( %eax ... %ebp ), %esp, ( %r8d ... %r15d ) (32 bits)
+        ( %rax ... %rbp ), %rsp, ( %r8  ... %r15  ) (64 bits)
+    ```
+    - *operands*:
+    ```asm
+        nop %rax                # register value
+        nop 0x104               # memory adress
+        nop $0x104              # literal
+        nop 4(%rax)             # adress pointed by the register + 4 offset
+        nop 9(%rax, %rdx)       # 9 + (adress in register_a) + (value in register_d)
+        nop (%rax, %rdx, 4)     # (adress in register_a) + (value in register_d) * 4
+    ```
+    - *mov*:
+    ```asm
+        movl    $0x4050, %eax       # immediate        to register,        4 bytes
+        movw    %bp, %sp            # register         to register,        2 bytes
+        movb    (%rdi, %rcx), %eax  # memory           to register,        1 bytes
+        movb    $-17, (%eax)        # immediate        to memory,          1 bytes
+        movq    $0x4050, -12(%rbp)  # register         to memory,          8 bytes
+        movabsq $0x4050, %rbp       # 64bit immediate  to register (only), 8 bytes
+    ```
+    - *movz*
+        - same as move but remaining bytes will be filled to zero.
+        - Register or memory as source and register as destination.
+    ```asm
+        movzbw # byte to word
+        movzbl # byte to long-word
+        movzwl # word to long-word
+        movzbq # byte to quartet
+        movzwq # word to quartet
+        # long-word to quartet with movl
+    ```
+    - *movs*
+        - same as move but with sign extension.
+        - Register or memory as source and register as destination.
+    ```asm
+        movsbw # byte to word
+        movsbl # byte to long-word
+        movswl # word to long-word
+        movsbq # byte to quartet
+        movswq # word to quartet
+        movslq # long-word to quartet
+    ```
+    - *stack*
+        - %rsp (stack pointer)
+    ```asm
+        pushq %rax # push value to the stack
+        popq  %rdx # pop value from the stack to a register
+    ```
+    ```asm
+        # Push
+        subq $8, %rsp
+        movq %rbp, (%rsp)
+
+        # Pop
+        movq (%rsp), %rax
+        addq $8, %rsp
+    ```
