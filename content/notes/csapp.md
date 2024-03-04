@@ -95,14 +95,6 @@
         9(%rax, %rdx)   | 9 + (adress in register_a) + (value in register_d) 
         (%rax, %rdx, 4) | (adress in register_a) + (value in register_d) * 4 
 
-    ```asm
-             # 
-             # 
-             # 
-             # 
-             # 
-             # 
-    ```
     - *mov*:
     ```asm
         movl    $0x4050, %eax       # immediate        to register,        4 bytes
