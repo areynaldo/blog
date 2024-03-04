@@ -86,7 +86,7 @@
         ( %rax ... %rbp ), %rsp, ( %r8  ... %r15  ) (64 bits)
     ```
     - *operands*:
-        expression      | type                                               
+        expression      | meaning                                               
         ----------------|----------------------------------------------------
         %rax            | register value                                     
         0x104           | memory adress                                      
