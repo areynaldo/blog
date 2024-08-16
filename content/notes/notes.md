@@ -20,5 +20,3 @@ weight = 1
 +++
 
 _Some notes I take while learning things._
-
-- [Computer Systems: A Programmer's Perspective](/notes/csapp)
